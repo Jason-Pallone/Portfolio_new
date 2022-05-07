@@ -4,30 +4,14 @@ import { images } from '../../constants';
 import './Header.scss';
 
 const scaleVariants = {
-  whileInViewFlutter: {
+  whileInView: {
     scale: [0, 1],
     opacity: [0, 1],
     transition: {
-     duration: .2,
+     duration: 1,
      ease: 'easeInOut'
     }
-  },
-  whileInViewRedux: {
-    scale: [0, 1],
-    opacity: [0, 1],
-    transition: {
-     duration: .5,
-     ease: 'easeInOut'
-    },
-  },
-    whileInViewSass: {
-      scale: [0, 1],
-      opacity: [0, 1],
-      transition: {
-       duration: .7,
-       ease: 'easeInOut'
-      }
-    }
+  }
 }
 const Header = () => {
   return (
@@ -67,34 +51,18 @@ const Header = () => {
 
       </motion.div>
 
-      <div className = 'app__header-circles'>
-        <motion.div 
-         className='circle-cmp app__flex'
-         key="flutterImg"
-         variant={scaleVariants}
-         whileInView = {scaleVariants.whileInViewFlutter}
-        >
-          <img src = {images.flutter} alt = "circle" />
-        </motion.div>
+      <motion.div
+        variant={scaleVariants}
+        whileInView = {scaleVariants.whileInView}
+        className = 'app__header-circles'
+      >
+        {[images.flutter, images.redux, images.sass].map((image, index) => (
+          <div className='circle-cmp app__flex' key={`circle-${index}`}>
+            <img src = {image} alt = "circle" />
+          </div>
+        ))}
+      </motion.div>
 
-        <motion.div 
-         className='circle-cmp app__flex'
-         key="reduxImg"
-         variant={scaleVariants}
-         whileInView = {scaleVariants.whileInViewRedux}
-        >
-          <img src = {images.redux} alt = "circle" />
-        </motion.div>
-
-        <motion.div 
-         className='circle-cmp app__flex'
-         key="sassImg"
-         variant={scaleVariants}
-         whileInView = {scaleVariants.whileInViewSass}
-        >
-          <img src = {images.sass} alt = "circle" />
-        </motion.div>
-      </div>
     </div>
   );
 };
