@@ -20,7 +20,7 @@
     height: 100%;
     flex-direction: row;
 
-    padding: 6rem 2rem 0;
+    padding: 2.5rem 2rem 0;
 
     @media screen and (min-width: 2000px) {
         padding-top: 8rem;
@@ -63,6 +63,7 @@
         flex-direction: row;
         width: auto;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        margin-right: 5rem;
     }
 
     .tag-cmp {
@@ -105,6 +106,7 @@
        border-radius: 50%;
        background: var(--white--color); 
        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+       margin-left: 8rem;
 
        img {
            height: 60%;
