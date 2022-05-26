@@ -8,7 +8,7 @@ const scaleVariants = [
       scale: [0, 1],
       opacity: [0, 1],
       transition: {
-       duration: .4,
+       duration: .2,
        ease: 'easeInOut'
       }
     }
@@ -20,7 +20,7 @@ const scaleVariants = [
       scale: [0, 1],
       opacity: [0, 1],
       transition: {
-       duration: .6,
+       duration: .4,
        ease: 'easeInOut'
       },
     },
@@ -32,7 +32,7 @@ const scaleVariants = [
         scale: [0, 1],
         opacity: [0, 1],
         transition: {
-         duration: .8,
+         duration: .6,
          ease: 'easeInOut'
         }
       }
@@ -44,7 +44,7 @@ const scaleVariants = [
         scale: [0, 1],
         opacity: [0, 1],
         transition: {
-         duration: 1,
+         duration: .8,
          ease: 'easeInOut'
         }
       }
@@ -56,7 +56,7 @@ const scaleVariants = [
         scale: [0, 1],
         opacity: [0, 1],
         transition: {
-         duration: 1.2,
+         duration: 1,
          ease: 'easeInOut'
         }
       }
@@ -68,7 +68,7 @@ const scaleVariants = [
         scale: [0, 1],
         opacity: [0, 1],
         transition: {
-         duration: 1.4,
+         duration: 1.2,
          ease: 'easeInOut'
         }
       }

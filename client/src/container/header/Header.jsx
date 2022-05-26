@@ -11,29 +11,25 @@ const Header = () => {
     <div id="Home" className='app__header app__flex'>
       <motion.div 
         whileInView = {{ x: [-100, 0], opacity: [0, 1]}}
-        transition = {{ duration: 0.5 }}
+        transition = {{ duration: 0.8 }}
         className = 'app__header-info'
       >
         <div className = 'app__header-badge'>
           <div className = 'badge-cmp app__flex'>
-            <span>👋</span>
-            <div style = {{marginLeft: 20}}>
-              <p className = 'p-text'>Hello, I am</p>
-              <h1 className = 'head-text'>Jason</h1>
+              <span>Hello, I'm <span className='header__name'> Jason Pallone</span></span>
             </div>
-          </div>
           <div className= 'tag-cmp app__flex'>
-            <p className = 'p-text'>Web Developer</p>
+            <p className = 'p-text'>Full Stack Developer</p>
           </div>
         </div>
       </motion.div>
-
-      <motion.div
+    
+      {/* <motion.div
         whileInView = {{ opacity: [0, 1] }}
         transition = {{ duration: 0.5, delayChildren: 0.5 }}
         className = 'app__header-img'
       >
-        <img src = {images.profile} alt = "profile image" />
+        <img src = {images.christopher_gower_unsplash} alt = "profile image" />
         <motion.img
           whileInView = {{ scale: [0, 1] }}
           transition = {{ duration: 1 , ease: 'easeInOut'}}
@@ -41,7 +37,7 @@ const Header = () => {
           alt = "profile_cirle"
           className = "overlay_circle"
         /> 
-      </motion.div>
+      </motion.div> */}
 
       <div className = 'app__header-circles'>
         {scaleVariants.map((image)=> (

@@ -24,9 +24,8 @@ const Work = () => {
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
     setAnimateCard([{ y:100, opacity: 0 }])
-
     setTimeout(() => {
-      setAnimateCard([{ y:0, opacity: 1 }])
+    setAnimateCard([{ y:0, opacity: 1 }])
 
       if(item === 'All') {
         setFilterWork(works)
@@ -40,17 +39,22 @@ const Work = () => {
     <>
      <h2 className="head-text">My<span> Projects </span> Section</h2>
 
-     <div className='app__work-filter'>
-       {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
-         <div
-           key={index}
-           onClick={() => handleWorkFilter(item)}
-           className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
-         >
-          {item}
-        </div>
-       ))}
-     </div>
+     <motion.div
+       whileInView = {{ y: [100, 0], opacity: [0, 1]}}
+       transition={{ duration: 0.5, delayChildren: 0.5 }}
+     >
+       <div className='app__work-filter'>
+         {['Full Stack', 'UI/UX', 'All'].map((item, index) => (
+           <div
+             key={index}
+             onClick={() => handleWorkFilter(item)}
+             className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
+           >
+             {item}
+           </div>
+         ))}
+       </div>
+     </motion.div>
 
      <motion.div
       animate={animateCard}
