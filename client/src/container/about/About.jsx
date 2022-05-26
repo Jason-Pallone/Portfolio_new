@@ -1,29 +1,29 @@
 import React, {useState, useEffect} from 'react'
 import { motion, useForceUpdate } from 'framer-motion'
-import { images } from '../../constants'
-import { AppWrap } from '../../wrapper'
+//import { images } from '../../constants'
+import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
 import './About.scss'
 
 // const abouts = [
 //   {
-//     title: 'Web development',
-//     description: 'I am a good developer',
+//     title: 'Web Development',
+//     description: 'Web developer',
 //     imgUrl: images.about01
 //   },
 //   {
-//     title: 'Web design',
-//     description: 'I am a good deisnger',
+//     title: 'Web Design',
+//     description: 'Web design',
 //     imgUrl: images.about02
 //   },
 //   {
-//     title: 'Full stack',
-//     description: 'I do full stack development',
+//     title: 'Full Stack',
+//     description: 'Full stack development',
 //     imgUrl: images.about03
 //   },
 //   {
 //     title: 'Database',
-//     description: 'I manipulate data in databases',
+//     description: 'Manipulate data in databases',
 //     imgUrl: images.about04
 //   }
 // ]
@@ -67,4 +67,8 @@ const About = () => {
   )
 }
 
-export default AppWrap(About, 'about')
+export default AppWrap(
+  MotionWrap(About, 'app__about'), 
+  'about',
+  "app__whitebg"
+);

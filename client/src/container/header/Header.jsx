@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { images } from '../../constants';
+//import { images } from '../../constants';
 import { AppWrap } from '../../wrapper/index'
 import scaleVariants from './scaleVariants'
 import './Header.scss';
@@ -14,12 +14,12 @@ const Header = () => {
         transition = {{ duration: 0.8 }}
         className = 'app__header-info'
       >
-        <div className = 'app__header-badge'>
-          <div className = 'badge-cmp app__flex'>
+        <div className='app__header-badge'>
+          <div className='badge-cmp app__flex'>
               <span>Hello, I'm <span className='header__name'> Jason Pallone</span></span>
             </div>
-          <div className= 'tag-cmp app__flex'>
-            <p className = 'p-text'>Full Stack Developer</p>
+          <div className='tag-cmp app__flex'>
+            <p className='title-text'>Full Stack Developer</p>
           </div>
         </div>
       </motion.div>
