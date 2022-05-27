@@ -12,7 +12,8 @@
     margin-top: 2rem;
 
     @media screen and (max-width: 900px) {
-        width: 90%
+
+        width: 95%
     }
 }
 
@@ -38,5 +39,11 @@
     
     img {
         height: 320px;
+    }
+}
+
+.about-header {
+    @media screen and (max-width: 450px) {
+      font-size: 1.6rem !important;
     }
 }

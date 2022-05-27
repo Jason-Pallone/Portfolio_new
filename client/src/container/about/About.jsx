@@ -42,10 +42,10 @@ const About = () => {
   return (
     <>
       <motion.div 
-        whileInView = {{ y: [150, 0], opacity: [0, 1]}}
+        whileInView = {{ y: [10, 0], opacity: [0, 1]}}
         transition={{ duration: 0.5, type: 'tween'}}
       >
-        <h2 className="head-text">I know that <span>Good Development</span><br />Means <span>Good Business</span></h2>
+        <h2 className="head-text about-header">I know that <span>Good Development</span><br />Means <span>Good Business</span></h2>
       </motion.div>
 
       <div className='app__profiles'>
