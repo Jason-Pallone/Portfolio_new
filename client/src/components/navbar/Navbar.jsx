@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, {  useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import './Navbar.scss'
@@ -9,13 +9,12 @@ const Navbar = () => {
 
   return (
     <nav className='app__navbar'>
-      <div className='app__navbar-name'>
+      {/* <div className='app__navbar-name'>
         Jason
-      </div>
+      </div> */}
       <ul className='app__navbar-links'>
-        {["Home", "About", "Contact", "Work", "Skills", "Testimonials"].map((items) => (
+        {["home", "About", "Work", "Skills", "Contact"].map((items) => (
           <li key={`link-${items}`} className='app__flex p-text'>
-            <div />
             <a 
               //style={active === items ? { color: '#313BAC' } : {}} 
               //onClick = { () => setActive(items) }
@@ -33,7 +32,7 @@ const Navbar = () => {
               transition = {{duration: 0.85, ease: 'easeOut'}}
               >
                 <HiX onClick={() => setToggle(false)} />
-                {["Home", "About", "Contact", "Work", "Skills", "Testimonials"].map((items) => (
+                {["home", "About", "Work", "Skills", "Contact"].map((items) => (
                 <ul>
                   <li key={items} className='app__flex p-text'>
                     <a href={`#${items}`} onClick={() => setToggle(false)}>{`${items}`}</a>

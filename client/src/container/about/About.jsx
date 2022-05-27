@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { motion, useForceUpdate } from 'framer-motion'
+import { motion } from 'framer-motion'
 //import { images } from '../../constants'
 import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
@@ -42,13 +42,13 @@ const About = () => {
   return (
     <>
       <motion.div 
-        whileInView = {{ x: [-200, 0], opacity: [0, 1]}}
+        whileInView = {{ y: [150, 0], opacity: [0, 1]}}
         transition={{ duration: 0.5, type: 'tween'}}
       >
         <h2 className="head-text">I know that <span>Good Development</span><br />Means <span>Good Business</span></h2>
       </motion.div>
 
-      <div id="About" className='app__profiles'>
+      <div className='app__profiles'>
         {abouts.map((about, index) => (
           <motion.div 
             key={about.title + index}
@@ -67,8 +67,9 @@ const About = () => {
   )
 }
 
-export default AppWrap(
-  MotionWrap(About, 'app__about'), 
-  'about',
-  "app__whitebg"
-);
+export default AppWrap(About, 'About', "app__whitebg")
+// export default AppWrap(
+//   MotionWrap(About, 'app__about'), 
+//   'About',
+//   "app__whitebg"
+// );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { AppWrap, MotionWrap } from '../../wrapper';
+import { AppWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 
 import './Work.scss'
@@ -37,7 +37,13 @@ const Work = () => {
 
   return (
     <>
-     <h2 className="head-text">My<span> Projects </span> Section</h2>
+     <motion.div
+       whileInView = {{ y: [-100, 0], opacity: [0, 1]}}
+       transition={{ duration: 0.5, delayChildren: 0.5 }}
+     >
+       <h2 className="head-text">My<span> Projects </span> Section</h2>
+     </motion.div>
+      
 
      <motion.div
        whileInView = {{ y: [100, 0], opacity: [0, 1]}}
@@ -94,12 +100,13 @@ const Work = () => {
             </motion.div>
           </div>
          <div className='app__work-content app__flex'>
+           <div className='app__work-tag app__flex'>
+             <p className=''>{work.tags[0]}</p>
+           </div>
            <h4 className='bold-text'>{work.title}</h4>
+
            <p className='p-text' style={{marginTop: 10}}>{work.description}</p>
 
-           <div className='app__work-tag app__flex'>
-             <p className='p-text'>{work.tags[0]}</p>
-           </div>
          </div>
         </div>
       ))}
@@ -108,8 +115,9 @@ const Work = () => {
   )
 }
 
-export default AppWrap(
-  MotionWrap(Work, 'app__works'), 
-  'work',
-  "app__whiteBg"
-);
+export default AppWrap(Work, 'Work', "app__whitebg")
+// export default AppWrap(
+//   MotionWrap(Work, 'app__works'), 
+//   'Work',
+//   "app__whiteBg"
+// );

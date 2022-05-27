@@ -24,8 +24,9 @@ const Skills = () => {
   return (
     <>
       <h2 className="head-text">Skills & Experiences</h2>
-
+      <span className="p-text more">Some of the technologies I use everyday!</span>
       <div className="app__skills-container">
+
         <motion.div className="app__skills-list">
           {skills.map((skill) => (
             <motion.div
@@ -43,7 +44,9 @@ const Skills = () => {
               <p className="p-text">{skill.name}</p>
             </motion.div>
           ))}
+          
         </motion.div>
+
         <div className="app__skills-exp">
           {experiences.map((experience) => (
             <motion.div
@@ -88,7 +91,7 @@ const Skills = () => {
 
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'), 
-  'skills',
+  'Skills',
   "app__whitebg"
 );
 

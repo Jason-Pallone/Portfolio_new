@@ -14,11 +14,40 @@
     }
 }
 
+
+.line-1{
+ 
+
+    border-right: 2px solid rgba(25, 25, 25, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 1s steps(48) 1s 1 normal both,
+             blinkTextCursor 600ms steps(48) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 100%;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(25, 25, 25, 0.75);}
+  to{border-right-color: transparent;}
+}
+
 .app__header {
-    flex: 1;
+    text-align: center;
+    margin: auto;
     width: 100%;
     height: 100%;
     flex-direction: column;
+    position: relative;
+    top: -360px;
 
     padding: 2.5rem 2rem 0;
 
@@ -41,7 +70,6 @@
 
 .title-text {
     position:relative;
-    top: -60px;
     color: rgb(0, 0, 0);
     line-height: 1.5;
   
@@ -51,7 +79,7 @@
 }
 
 .app__header-info {
-    flex: 0.65;
+    flex: 0.4;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -108,80 +136,80 @@
     // }
 }
 
-.app__header-circles {
-    flex: .75;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    // margin-left: 1rem;
-    // height: 100%;
+// .app__header-circles {
+//     flex: .75;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-evenly;
+//     align-items: flex-start;
+//     // margin-left: 1rem;
+//     // height: 100%;
 
-    div {
-       width: 100px;
-       height: 100px;
-       border-radius: 25%;
-      // background: rgb(235, 235, 235);
-      // box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        margin-left: 5rem;
+//     div {
+//        width: 100px;
+//        height: 100px;
+//        border-radius: 25%;
+//       // background: rgb(235, 235, 235);
+//       // box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+//         margin-left: 5rem;
 
-       img {
-           height: 70%;
-           width: 70%;
-       }
-    }
+//        img {
+//            height: 70%;
+//            width: 70%;
+//        }
+//     }
 
-    // div:nth-child(1) {
-    //     width: 100px;
-    //     height: 100px;
-    // }
+//     // div:nth-child(1) {
+//     //     width: 100px;
+//     //     height: 100px;
+//     // }
 
-    // div:nth-child(2) {
-    //     margin: .75rem;
-    //     width: 150px;
-    //     height: 150px;
-    // }
+//     // div:nth-child(2) {
+//     //     margin: .75rem;
+//     //     width: 150px;
+//     //     height: 150px;
+//     // }
 
-    // div:nth-child(3) {
-    //     width: 100px;
-    //     height: 100px;
-    // }
+//     // div:nth-child(3) {
+//     //     width: 100px;
+//     //     height: 100px;
+//     // }
 
 
-    @media screen and (min-width: 2000px) {
-        div {
-            width: 200px;
-            height: 200px;
+//     @media screen and (min-width: 2000px) {
+//         div {
+//             width: 200px;
+//             height: 200px;
 
-        }
-        // div:nth-child(1) {
-        //     width: 400px;
-        //     height: 400px;
-        // }
+//         }
+//         // div:nth-child(1) {
+//         //     width: 400px;
+//         //     height: 400px;
+//         // }
     
-        // div:nth-child(2) {
-        //     margin: 1.75rem;
-        //     width: 170px;
-        //     height: 170px;
-        // }
+//         // div:nth-child(2) {
+//         //     margin: 1.75rem;
+//         //     width: 170px;
+//         //     height: 170px;
+//         // }
     
-        // div:nth-child(3) {
-        //     width: 200px;
-        //     height: 200px;
-        // }
-    }
+//         // div:nth-child(3) {
+//         //     width: 200px;
+//         //     height: 200px;
+//         // }
+//     }
     
-    @media screen and (max-width:1200px) {
-       width: 100%;
-       flex-direction: row;
-       flex-wrap: wrap;
-       margin-left: 0; 
+//     @media screen and (max-width:1200px) {
+//        width: 100%;
+//        flex-direction: row;
+//        flex-wrap: wrap;
+//        margin-left: 0; 
 
-       div {
-           margin: 1rem;
-       }    
-    }
-}
+//        div {
+//            margin: 1rem;
+//        }    
+//     }
+// }
 
 
 .app__header-img {

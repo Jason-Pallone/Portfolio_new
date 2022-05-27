@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 //import { images } from '../../constants';
 import { AppWrap } from '../../wrapper/index'
-import scaleVariants from './scaleVariants'
+//import scaleVariants from './scaleVariants'
 import './Header.scss';
 
 
@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div id="Home" className='app__header app__flex'>
       <motion.div 
-        whileInView = {{ x: [-100, 0], opacity: [0, 1]}}
+        whileInView = {{ y: [-100, 0], opacity: [0, 1]}}
         transition = {{ duration: 0.8 }}
         className = 'app__header-info'
       >
@@ -19,7 +19,8 @@ const Header = () => {
               <span>Hello, I'm <span className='header__name'> Jason Pallone</span></span>
             </div>
           <div className='tag-cmp app__flex'>
-            <p className='title-text'>Full Stack Developer</p>
+          <p class="line-1 anim-typewriter title-text">Software Engineer</p>
+
           </div>
         </div>
       </motion.div>
@@ -39,7 +40,7 @@ const Header = () => {
         /> 
       </motion.div> */}
 
-      <div className = 'app__header-circles'>
+      {/* <div className = 'app__header-circles'>
         {scaleVariants.map((image)=> (
           <motion.div 
            className='circle-cmp app__flex'
@@ -50,7 +51,7 @@ const Header = () => {
             <img src = {image.image} alt = "circle" />
           </motion.div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

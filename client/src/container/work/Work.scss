@@ -53,12 +53,12 @@
         border-radius: 0.5rem;
         background-color: #fff;
         color: #000;
-
+        box-shadow: 0 0 25px rgba(0,0,0,0.2);
         cursor: pointer;
         transition: all 0.3s ease;
 
         &:hover {
-            box-shadow: 0 0 25px rgba(0,0,0,0.2);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
         }
 
         @media screen and (min-width: 2000px) {
@@ -132,15 +132,27 @@
     flex-direction: column;
 
     h4 {
-        margin-top: 1rem;
-        line-height: 1.5;
+        margin-top: .5rem;
+       
     }
 
-    .app__work-tag {
-        position: absolute;
-        padding: 0.5rem 1rem;
-        background-color: #fff;
-        border-radius: 10px;
-        top: -33px;
+    .p-text {
+        position: relative;
+        top: -10px;
     }
-}
+    
+    .app__work-tag {
+        // position: absolute;
+        padding: 0.5rem 1rem;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+       
+        background-color: var(--secondary-color);
+     
+
+        p {
+            color: #fff;
+            padding: 1px;
+        }
+    }
+} 
