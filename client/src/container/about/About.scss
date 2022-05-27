@@ -10,6 +10,10 @@
     align-items: flex-start;
     flex-wrap: wrap;
     margin-top: 2rem;
+
+    @media screen and (max-width: 900px) {
+        width: 90%
+    }
 }
 
 .app__profile-item {
