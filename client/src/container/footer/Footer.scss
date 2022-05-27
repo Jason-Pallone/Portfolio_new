@@ -120,4 +120,8 @@ button {
 
 .copyright { 
     margin-top: 11rem;
+
+    @media screen and (max-width:900px) {
+        margin-top: 1rem;
+    }
 }
