@@ -23,7 +23,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className='app__navbar-menu'>
+      {/* <div className='app__navbar-menu'>
         <HiMenuAlt4 onClick={() => setToggle(true)}/>
 
         {toggle && (
@@ -41,7 +41,7 @@ const Navbar = () => {
                 ))}
             </motion.div>
           )}
-      </div>
+      </div> */}
     </nav>  
   );
 };
