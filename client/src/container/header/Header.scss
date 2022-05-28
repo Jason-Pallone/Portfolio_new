@@ -1,10 +1,11 @@
 #home {
     position: relative;
+    background-color: white;
     background: linear-gradient(-90deg, #ffffff, #000000, #000000, #ffffff);
     background-size: 1200% 1200%;
    
     animation: gradient 30s ease infinite;
-    animation-delay: 1200ms;
+    animation-delay: -4.2s;
     // background-size: cover;
     // background-repeat: repeat;
      background-position: center;
@@ -31,8 +32,6 @@
   }
 
 .line-1{
- 
-
     border-right: 2px solid rgba(25, 25, 25, 0.75);
     font-size: 180%;
     text-align: center;
@@ -45,11 +44,14 @@
 .anim-typewriter{
   animation: typewriter 1s steps(48) 1s 1 normal both,
              blinkTextCursor 600ms steps(48) infinite normal;
+  animation-delay: 2.4s;
 }
+
 @keyframes typewriter{
   from{width: 0;}
   to{width: 100%;}
 }
+
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(25, 25, 25, 0.75);}
   to{border-right-color: transparent;}
