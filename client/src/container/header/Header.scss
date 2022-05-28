@@ -1,6 +1,8 @@
 #home {
     position: relative;
-    background: url(../../assets/paul-minami--tzPh9aswxU-unsplash.jpg);
+    background-image:
+    linear-gradient(to bottom, rgba(23, 23, 23, 0.2), rgba(255, 255, 255, 0.2)),
+    url(../../assets/alexandru-acea-XEB8y0nRRP4-unsplash.jpg);
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
@@ -47,8 +49,7 @@
     height: 100%;
     flex-direction: column;
     position: relative;
-    top: -360px;
-
+    top: -100px;
     padding: 2.5rem 2rem 0;
 
     @media screen and (min-width: 2000px) {
@@ -109,14 +110,17 @@
         border-radius: 15px;
         flex-direction: row;
         width: auto;
-        //background: rgb(232, 232, 232);
-       // box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        // margin-right: 5rem;
+        background: rgb(255, 255, 255);
+       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
     }
 
     .tag-cmp {
         flex-direction: column;
         margin-top: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 0;
+        
 
         p {
             width: 100%;
