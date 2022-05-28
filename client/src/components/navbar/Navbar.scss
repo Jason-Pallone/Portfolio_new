@@ -56,15 +56,16 @@
         }
 
         a {
-            color: var(--gray--color);
+            //color: var(--gray--color);
+            color:#2250f4;
             text-decoration: none;
             flex-direction: column;
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 800;
             transition: all 0.3 ease-in-out;
 
             &:hover {
-                color: var(--secondary-color);
+                color: rgb(1, 1, 1);
             }
         }
         &:hover {
